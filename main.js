@@ -94,3 +94,4 @@ audio.loop = true;
 audio.play();
 
 audio.playbackRate = 0.5 + speed * 0.1;
+document.getElementById("speed").innerText = "Speed: " + speed;
