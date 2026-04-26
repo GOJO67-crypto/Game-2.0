@@ -1,0 +1,29 @@
+/* Remove default spacing */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Optional UI overlay (for speed, score, etc.) */
+#ui {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+/* Example button styling */
+button {
+  padding: 10px;
+  background: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #555;
+}
