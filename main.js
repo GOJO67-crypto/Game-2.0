@@ -68,3 +68,29 @@ function animate() {
 }
 
 animate();
+
+const loader = new THREE.CubeTextureLoader();
+const texture = loader.load([
+  'px.jpg','nx.jpg','py.jpg','ny.jpg','pz.jpg','nz.jpg'
+]);
+scene.background = texture;
+
+renderer.shadowMap.enabled = true;
+
+const ambient = new THREE.AmbientLight(0xffffff, 0.4);
+scene.add(ambient);
+
+const directional = new THREE.DirectionalLight(0xffffff, 1);
+directional.position.set(5, 10, 7);
+scene.add(directional);
+
+camera.position.lerp(targetPosition, 0.1);
+
+camera.fov = 75 + speed * 0.5;
+camera.updateProjectionMatrix();
+
+const audio = new Audio('engine.mp3');
+audio.loop = true;
+audio.play();
+
+audio.playbackRate = 0.5 + speed * 0.1;
